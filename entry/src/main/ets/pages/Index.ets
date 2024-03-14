@@ -12,6 +12,7 @@ struct Index {
           .fontColor(Color.White)
 
 
+
       }
       .width('100%')
     }
