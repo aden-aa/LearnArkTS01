@@ -8,9 +8,7 @@ struct Index {
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
           .fontColor(Color.White)
-
-
-
+        Button('跳转到第一页')
 
 
       }
