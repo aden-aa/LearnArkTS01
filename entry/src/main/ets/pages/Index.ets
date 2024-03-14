@@ -2,18 +2,19 @@
 @Component
 struct Index {
   build() {
-    Row() {
-      Column() {
-        Text('跳转到第二页')
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-          .fontColor(Color.White)
-        Button('跳转到第一页')
+    Column() {
+      Text('第一页')
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+        .margin({ bottom: 50 })
 
-
-      }
-      .width('100%')
+      Button('跳转到第二页')
+        .height(59)
+        .width(300)
+        .backgroundColor(Color.Blue)
     }
-    .height('100%')
+    .width('100%')
+
   }
+
 }
