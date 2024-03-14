@@ -11,6 +11,7 @@ struct Index {
           .fontWeight(FontWeight.Bold)
           .fontColor(Color.White)
 
+
       }
       .width('100%')
     }
