@@ -1,12 +1,10 @@
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World'
-
   build() {
     Row() {
       Column() {
-        Text(this.message)
+        Text('跳转到第二页')
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
           .fontColor(Color.White)
