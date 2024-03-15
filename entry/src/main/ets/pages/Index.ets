@@ -11,7 +11,6 @@ data:string=''
       this.data=record['backData']
     }
   }
-
   build() {
     Row() {
       Column() {
@@ -25,7 +24,7 @@ data:string=''
           .fontSize(20)
           .opacity(0.5)
         Button('跳转到第二页')
-          .height(59)
+          .height(60)
           .width(300)
           .backgroundColor(Color.Blue)
           .onClick(()=>{
