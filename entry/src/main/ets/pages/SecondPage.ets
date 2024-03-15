@@ -3,19 +3,12 @@ import router from '@ohos.router';
 @Entry
 @Component
 struct Index {
-@State
-data:string=''
-  onPageShow() {
-  let record  = router.getParams()
-    if (record) {
-      this.data=record['backData']
-    }
-  }
-
+  @State
+  data:string=(router.getParams() as Record<string,string>)['data1']
   build() {
     Row() {
       Column() {
-        Text('第一页')
+        Text('第二页')
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
         Blank(50)
@@ -24,16 +17,17 @@ data:string=''
           .fontColor(Color.Gray)
           .fontSize(20)
           .opacity(0.5)
-        Button('跳转到第二页')
+        Button('返回到第一页')
           .height(59)
           .width(300)
           .backgroundColor(Color.Blue)
           .onClick(()=>{
             //页面跳转
-            router.pushUrl({
-              url:'pages/SecondPage',
+            router.showAlertBeforeBackPage({message:'确定要返回吗？'})
+            router.back({
+              url:'pages/Index',
               params:{
-                data1:'第一页要传给第二页的数据'
+                backData:'第二页给第一页的数据'
               }
             })
           })
